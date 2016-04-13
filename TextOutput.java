@@ -1,12 +1,11 @@
 import java.io.IOException;
 import java.io.OutputStream;
- 
 import javax.swing.JTextArea;
  
 /**
- * This class extends from OutputStream to redirect output to a JTextArrea
+ * This class makes the prints appear in the text area rather than in the console
+ * Got this code from:
  * @author www.codejava.net
- *
  */
 public class TextOutput extends OutputStream {
     private JTextArea textArea;

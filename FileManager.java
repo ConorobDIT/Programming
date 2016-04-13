@@ -1,25 +1,17 @@
-/**************************************************
- * 
- * 
- *  This class provides file reading and writing functionality
- *  Author: Susan McKeeve
- *  2016
- *  
- *  
- ************************************************************************************/
+/*  
+ * This class is to allow reading of the file
+*/
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileManager 
 {
 	String fileName;
-	File fileExample;
+	File fileE;
 	Scanner myScanner;
-    PrintWriter pwInput;
 	
 	// Constructor
 	FileManager (String fileName)
@@ -30,7 +22,7 @@ public class FileManager
 	// get a connection to the file
 	void connectToFile()
 	{
-		fileExample = new File(fileName);
+		fileE = new File(fileName);
 	}
 
 	// Read the file, returning a string of lines
@@ -39,7 +31,7 @@ public class FileManager
     	ArrayList<String> values = new ArrayList<String>();
 	    try
 		{
-	    	myScanner = new Scanner(fileExample); 
+	    	myScanner = new Scanner(fileE); 
 	    	myScanner.useDelimiter(";");
 			 while (myScanner.hasNextLine())
 			    { 
@@ -54,15 +46,10 @@ public class FileManager
 	        return values;
 	    }
     }
-    
+   
     void closeReadFile()
     {
 		 myScanner.close();
-    }
-
-    void closeWriteFile()
-    {
-		 pwInput.close();
     }
 
 }
