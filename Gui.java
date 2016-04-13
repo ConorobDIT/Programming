@@ -21,7 +21,6 @@ public class Gui extends JFrame implements ActionListener{
 	//Create the application.
 	public Gui(String title) {
 		super(title);
-		newAlgo = newAlgo;
 		//Setting up the frame
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(500,500);
